@@ -42,7 +42,7 @@ I want to perform the following data operation over the Person TableEntity.
 - Read
 - Update
 - Delete
-- Read a range of records TODO
+- Read a range of records, filter by date range and descriminator.
 
 ### References
 
