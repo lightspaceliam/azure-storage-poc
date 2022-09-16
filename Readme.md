@@ -17,13 +17,19 @@ CosmosTablePoc
 
 CosmosTableServices is designed to simulate a generic decoupled service that could be consumed by multiple subscribers.
 
+### Prerequisites
+
+- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free)
+- [.NET 6.0](https://dotnet.microsoft.com/download)
+
 ### Setup
 
 Client secrets configuration is required. Assuming you are using Visual Studio 19 or higher:
 
 1. Clone code base from: https://github.com/lightspaceliam/azure-storage-poc.git
-2. Right click the CosmosTablePoc and select `Manage User Secrets`
-3. Add:
+2. [Create an Azure Cosmos DB account](https://docs.microsoft.com/en-us/azure/cosmos-db/table/create-table-dotnet?tabs=azure-portal%2Cwindows#create-an-azure-cosmos-db-account)
+3. Right click the CosmosTablePoc and select `Manage User Secrets`
+4. Add:
 ```json
 {
   "AzureCosmosStorage": {
@@ -31,8 +37,8 @@ Client secrets configuration is required. Assuming you are using Visual Studio 1
   }
 }
 ```
-4. Build
-5. Run
+5. Build
+6. Run
 
 ### Use Cases
 
