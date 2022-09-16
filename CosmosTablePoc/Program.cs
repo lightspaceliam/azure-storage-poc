@@ -1,6 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using CosmosTablePoc;
+using CosmosTablePoc.CosmosTableServices;
+using CosmosTablePoc.CosmosTableServices.Abstract;
+using CosmosTablePoc.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,6 +18,8 @@ IHost host = Host.CreateDefaultBuilder(args)
     })
     .ConfigureServices((hostContext, services) => {
         services.AddLogging(configure => configure.AddConsole());
+
+        services.AddTransient<ICosmosTableEntityService<Person>, PersonCosmosTableEntityService>();
 
         services.AddTransient<PersonWorker>();
     })
